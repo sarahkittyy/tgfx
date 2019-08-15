@@ -3,9 +3,20 @@
 namespace tgfx
 {
 
+color::color()
+	: r(0), g(0), b(0)
+{
+}
+
 color::color(uint8_t r, uint8_t g, uint8_t b)
 	: r(r), g(g), b(b)
 {
+}
+
+color::color(uint32_t integer)
+{
+	/// Convert from an integer.
+	from_integer(integer);
 }
 
 uint32_t color::to_integer() const
