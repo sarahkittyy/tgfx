@@ -11,8 +11,8 @@ TEST(ansi_color, MODE_16)
 	using namespace tgfx::internal;
 	using tgfx::color;
 	EXPECT_EQ(get_color_escape_code(color()), "\u001b[30m");
-	EXPECT_EQ(get_color_escape_code(color(128, 128, 128)), "\u001b[1;40m");
-	EXPECT_EQ(get_color_escape_code(color(), false), "\u001b[30m");
+	EXPECT_EQ(get_color_escape_code(color(128, 128, 128)), "\u001b[1;30m");
+	EXPECT_EQ(get_color_escape_code(color(), false), "\u001b[40m");
 	EXPECT_EQ(get_color_escape_code(color(128, 128, 128), false), "\u001b[1;40m");
 
 	EXPECT_EQ(get_color_escape_code(color(255, 255, 255)), "\u001b[1;37m");
