@@ -10,6 +10,7 @@ std::string get_color_escape_code(const color& in, bool foreground)
 	std::stringstream code;
 	code << "\u001b[";
 
+#ifndef COLOR_MODE_TRUE
 	//* Calculates the adjusted color distance of two colors if they were 3D vectors.
 	// We could square root it, but we don't need the value itself,
 	// so we can just compare the squares and get the same result.
@@ -30,6 +31,7 @@ std::string get_color_escape_code(const color& in, bool foreground)
 	//* w(r) = 0.30
 	//* w(g) = 0.59
 	//* w(b) = 0.11
+#endif
 
 #ifdef COLOR_MODE_16
 
