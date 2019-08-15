@@ -21,7 +21,7 @@ namespace internal
  * 
  * @remarks The input color will be rounded to the nearest compatible color based on the COLOR_MODE CMake configuration setting.
  */
-std::string get_color_escape_code(const color& in, bool foreground = false);
+std::string get_color_escape_code(const color& in, bool foreground = true);
 
 }
 
