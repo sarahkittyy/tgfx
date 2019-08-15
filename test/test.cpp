@@ -1,5 +1,6 @@
 #include "gtest/gtest.h"
 
+#include "tgfx-test/color.hpp"
 #include "tgfx-test/context.hpp"
 #include "tgfx-test/drawable.hpp"
 #include "tgfx-test/screen.hpp"
