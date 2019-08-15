@@ -32,7 +32,7 @@ TEST(ansi_color, MODE_256)
 	EXPECT_EQ(get_color_escape_code(color(0x87af5eff)), "\u001b[38;5;107 m");
 	EXPECT_EQ(get_color_escape_code(color(0xaf0000ff)), "\u001b[38;5;124 m");
 	EXPECT_EQ(get_color_escape_code(color(0x880000ff), false), "\u001b[48;5;88 m");
-	EXPECT_EQ(get_color_escape_code(color(127, 127, 255), false), "\u001b[48;5;88 m");
+	EXPECT_EQ(get_color_escape_code(color(127, 127, 255), false), "\u001b[48;5;105 m");
 }
 
 #elif COLOR_MODE_TRUE
