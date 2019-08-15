@@ -2,6 +2,8 @@
 
 #include <sys/ioctl.h>
 
+#include "tgfx/util/vec2.hpp"
+
 namespace tgfx
 {
 

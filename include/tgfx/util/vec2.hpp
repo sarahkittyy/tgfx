@@ -1,5 +1,7 @@
 #pragma once
 
+#include <cmath>
+
 namespace tgfx
 {
 
@@ -80,6 +82,19 @@ public:
 		y /= other;
 		return *this;
 	}
+	/// Returns true if and only if the vectors are exactly identical.
+	template <typename OtherNumber>
+	constexpr bool operator==(const vec2<OtherNumber>& other) const
+	{
+		return (x == other.x) && (y == other.y);
+	}
+	/// Returns true if and only if hte vectors are not exactly identical.
+	template <typename OtherNumber>
+	constexpr bool operator!=(const vec2<OtherNumber>& other) const
+	{
+		return !operator==(other);
+	}
+
 	/// Returns the dot product of this vector and another vector.
 	template <typename OtherNumber>
 	Number dot(const vec2<OtherNumber>& other) const
@@ -87,10 +102,21 @@ public:
 		return (x * other.x) + (y * other.y);
 	}
 
+	/// Return the hypotenuse of the vector.
+	Number hypot() const
+	{
+		return std::sqrt(x * x + y * y);
+	}
+
 	/// X
 	Number x;
 	/// Y
 	Number y;
 };
+
+/// Common typedefs.
+typedef vec2<float> vec2f;
+typedef vec2<int> vec2i;
+typedef vec2<unsigned int> vec2u;
 
 }
