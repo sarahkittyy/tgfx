@@ -52,7 +52,7 @@ std::string get_escape_code(const color& in, bool foreground)
 	bool bright = color_code > 7;
 
 	// Output the resulting ANSI code to the stream
-	code << (bright ? "1;" : "") << ((foreground ? 30 : 40) + (color_code % 8)) << " m";
+	code << (bright ? "1;" : "") << ((foreground ? 30 : 40) + (color_code % 8)) << "m";
 
 #elif COLOR_MODE_256
 	// Foreground / background modifier.
