@@ -42,5 +42,5 @@ TEST(color, HexConversion)
 	color a(25, 50, 75);
 	EXPECT_STRCASEEQ(a.to_hex_color().c_str(), "#19324b");
 	color b(127, 127, 255);
-	EXPECT_STRCASEEQ(a.to_hex_color().c_str(), "#7f7fff");
+	EXPECT_STRCASEEQ(b.to_hex_color().c_str(), "#7f7fff");
 }

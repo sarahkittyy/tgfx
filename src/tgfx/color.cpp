@@ -10,12 +10,12 @@ color::color(uint8_t r, uint8_t g, uint8_t b)
 
 uint32_t color::to_integer() const
 {
-	uint32_t r = r;
-	uint32_t g = g;
-	uint32_t b = b;
-	uint32_t a = 0xFF;
+	uint32_t r32 = r;
+	uint32_t g32 = g;
+	uint32_t b32 = b;
+	uint32_t a32 = 0xFF;
 
-	return r << 24 | g << 16 | b << 8 | a;
+	return (r32 << 24) | (g32 << 16) | (b32 << 8) | (a32 << 0);
 }
 
 void color::from_integer(uint32_t integer)
@@ -28,7 +28,7 @@ void color::from_integer(uint32_t integer)
 std::string color::to_hex_color() const
 {
 	std::stringstream ss;
-	ss << "#" << std::hex << (to_integer() >> 8);
+	ss << "#" << std::hex << std::left << std::setfill('0') << std::setw(6) << (to_integer() >> 8);
 	return ss.str();
 }
 

@@ -1,6 +1,7 @@
 #pragma once
 
 #include <cstdint>
+#include <iomanip>
 #include <ios>
 #include <sstream>
 #include <string>
