@@ -2,6 +2,8 @@
 
 A cross-platform terminal graphics library for linux.
 
+Heavily inspired by [SFML.](https://github.com/SFML/SFML)
+
 ## Building
 
 ```bash
