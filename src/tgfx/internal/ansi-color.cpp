@@ -4,7 +4,7 @@
 namespace tgfx::internal
 {
 
-std::string get_escape_code(const color& in, bool foreground)
+std::string get_color_escape_code(const color& in, bool foreground)
 {
 	/// The escape code to append to, and then return.
 	std::stringstream code;
