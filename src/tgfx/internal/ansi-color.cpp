@@ -81,7 +81,7 @@ std::string get_color_escape_code(const color& in, bool foreground)
 	code << (foreground ? "38;2" : "48;2");
 	code << ";";
 	// We can directly use RGB in COLOR_MODE_TRUE
-	code << in.r << ";" << in.g << ";" << in.b << " m";
+	code << (int)in.r << ";" << (int)in.g << ";" << (int)in.b << " m";
 #endif
 	return code.str();
 }
