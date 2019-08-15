@@ -18,7 +18,11 @@ class color
 {
 public:
 	/// Defaults to black (0, 0, 0)
-	color(uint8_t r = 0, uint8_t g = 0, uint8_t b = 0);
+	color();
+	/// Initialize from RGB values.
+	color(uint8_t r, uint8_t g, uint8_t b);
+	/// Convert the color from a coor integer.
+	color(uint32_t integer);
 
 	/// Converts the color to a 32-bit color integer.
 	uint32_t to_integer() const;
@@ -27,7 +31,8 @@ public:
 
 	/// Convert the color to a readable hex format.
 	std::string to_hex_color() const;
-
+	/// Convert this color to a printable ansi-escape code.
+	std::string to_ansi_escape(bool foreground = true) const;
 
 	/// Red component
 	uint8_t r;

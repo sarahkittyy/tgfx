@@ -1,11 +1,23 @@
 #include "tgfx/color.hpp"
+#include "tgfx/internal/ansi-color.hpp"
 
 namespace tgfx
 {
 
+color::color()
+	: r(0), g(0), b(0)
+{
+}
+
 color::color(uint8_t r, uint8_t g, uint8_t b)
 	: r(r), g(g), b(b)
 {
+}
+
+color::color(uint32_t integer)
+{
+	/// Convert from an integer.
+	from_integer(integer);
 }
 
 uint32_t color::to_integer() const
@@ -30,6 +42,11 @@ std::string color::to_hex_color() const
 	std::stringstream ss;
 	ss << "#" << std::hex << std::left << std::setfill('0') << std::setw(6) << (to_integer() >> 8);
 	return ss.str();
+}
+
+std::string color::to_ansi_escape(bool foreground) const
+{
+	return internal::get_color_escape_code(*this, foreground);
 }
 
 }
