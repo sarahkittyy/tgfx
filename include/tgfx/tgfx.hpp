@@ -1,5 +1,6 @@
 #pragma once
 
+#include "tgfx/color.hpp"
 #include "tgfx/context.hpp"
 #include "tgfx/drawable.hpp"
 #include "tgfx/screen.hpp"
