@@ -1,6 +1,9 @@
 #pragma once
 
 #include <cmath>
+#include <ostream>
+#include <sstream>
+#include <string>
 
 namespace tgfx
 {
@@ -18,6 +21,14 @@ public:
 	vec2(Number x = 0, Number y = 0)
 		: x(x), y(y)
 	{
+	}
+
+	/// Converts the x/y point to a readable human format.
+	operator std::string() const
+	{
+		std::ostringstream oss;
+		oss << "(" << x << ", " << y << ")";
+		return oss.str();
 	}
 
 	/// Adds two vectors, resulting in v + w = (v.x + w.x, v.y + w.y)
@@ -119,4 +130,12 @@ typedef vec2<float> vec2f;
 typedef vec2<int> vec2i;
 typedef vec2<unsigned int> vec2u;
 
+}
+
+// ostream Overload
+template <typename Number>
+std::ostream& operator<<(std::ostream& os, const tgfx::vec2<Number>& vector)
+{
+	os << std::string(vector);
+	return os;
 }

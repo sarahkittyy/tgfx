@@ -114,3 +114,24 @@ TEST(vec2, Hypotenuse)
 	EXPECT_EQ(b.hypot(), 13);
 	EXPECT_FLOAT_EQ(c.hypot() * c.hypot(), 8);
 }
+
+TEST(vec2, Stringify)
+{
+	using namespace tgfx;
+
+	vec2f x(3.8f, 8.9f);
+	vec2f y(2.2f, 4.2f);
+
+	EXPECT_EQ(std::string(x), "(3.8, 8.9)");
+	EXPECT_EQ(std::string(y), "(2.2, 4.2)");
+}
+
+TEST(vec2, OStream)
+{
+	using namespace tgfx;
+
+	vec2f x(3.4f, 100.2024f);
+	std::ostringstream oss;
+	oss << x;
+	EXPECT_EQ(oss.str(), "(3.4, 100.202)");
+}
