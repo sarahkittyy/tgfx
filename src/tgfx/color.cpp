@@ -1,4 +1,5 @@
 #include "tgfx/color.hpp"
+#include "tgfx/internal/ansi-color.hpp"
 
 namespace tgfx
 {
@@ -41,6 +42,11 @@ std::string color::to_hex_color() const
 	std::stringstream ss;
 	ss << "#" << std::hex << std::left << std::setfill('0') << std::setw(6) << (to_integer() >> 8);
 	return ss.str();
+}
+
+std::string color::to_ansi_escape(bool foreground) const
+{
+	return internal::get_color_escape_code(*this, foreground);
 }
 
 }

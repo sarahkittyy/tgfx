@@ -31,6 +31,8 @@ public:
 
 	/// Convert the color to a readable hex format.
 	std::string to_hex_color() const;
+	/// Convert this color to a printable ansi-escape code.
+	std::string to_ansi_escape(bool foreground = true) const;
 
 	/// Red component
 	uint8_t r;
