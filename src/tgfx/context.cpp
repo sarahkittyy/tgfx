@@ -4,7 +4,7 @@ namespace tgfx
 {
 
 context::context()
-	: mOpen(true)
+	: m_open(true)
 {
 	// Clear the screen on context creation
 	clear();
@@ -26,11 +26,25 @@ void context::close()
 	m_open = false;
 }
 
-void context::draw(const drawable&)
-
-	void context::clear()
+void context::clear()
 {
-	std::cout << "\033[H\033[J";
+	m_screen.flush();
+}
+
+void context::draw(const drawable& draw)
+{
+	m_screen.draw(draw);
+}
+
+void context::render(unsigned int framerate)
+{
+	// For only rendering with the given framerate.
+	if (m_clock.elapsed() >= time::seconds(1.f / (float)framerate))
+	{
+		m_clock.restart();
+		std::string screen_content = m_screen.flush();
+		std::cout << "\033[H\033[J";
+	}
 }
 
 const vec2u context::size() const
