@@ -41,6 +41,13 @@ TEST(ansi_color, MODE_TRUE)
 {
 	using namespace tgfx::internal;
 	using tgfx::color;
+
+	EXPECT_EQ(get_color_escape_code(color(127, 127, 255)), "\u001b[38;2;127;127;255 m");
+	EXPECT_EQ(get_color_escape_code(color(127, 127, 255), false), "\u001b[48;2;127;127;255 m");
+	EXPECT_EQ(get_color_escape_code(color(82, 190, 40)), "\u001b[38;2;82;190;40 m");
+	EXPECT_EQ(get_color_escape_code(color(82, 190, 40), false), "\u001b[48;2;82;190;40 m");
+	EXPECT_EQ(get_color_escape_code(color(20, 255, 0)), "\u001b[38;2;20;255;0 m");
+	EXPECT_EQ(get_color_escape_code(color(20, 255, 0), false), "\u001b[48;2;20;255;0 m");
 }
 
 #endif
