@@ -1,3 +1,4 @@
+#include <algorithm>
 #include "tgfx/color.hpp"
 #include "tgfx/internal/ansi-color.hpp"
 
@@ -34,20 +35,19 @@ std::string get_color_escape_code(const color& in, bool foreground)
 #endif
 
 #ifdef COLOR_MODE_16
-
+	/// Endpoint iterator for available colors in the map.
 	auto available_end = COLORS.begin();
 	std::advance(available_end, 16);
-
 	// Find the code in the first 16 available colors in the LUT that most closeley matches `in`.
-	uint8_t color_code = std::min(COLORS.begin(), available_end,
-								  [&dist](const std::pair<uint8_t, uint32_t>& a,
-										  const std::pair<uint8_t, uint32_t>& b) {
-									  /// Get the two colors from the color integers in the map.
-									  color a_col(a.second);
-									  color b_col(b.second);
-									  /// Return the one with the lower distance to the original color.
-									  return dist(a_col) < dist(b_col);
-								  })
+	uint8_t color_code = std::min_element(COLORS.begin(), available_end,
+										  [&dist](const std::pair<uint8_t, uint32_t>& a,
+												  const std::pair<uint8_t, uint32_t>& b) {
+											  /// Get the two colors from the color integers in the map.
+											  color a_col(a.second);
+											  color b_col(b.second);
+											  /// Return the one with the lower distance to the original color.
+											  return dist(a_col) < dist(b_col);
+										  })
 							 ->first;
 
 	// Special flags we can determine from the resulting color.
@@ -63,15 +63,15 @@ std::string get_color_escape_code(const color& in, bool foreground)
 
 	// Find the color in the color lookup table of which dist() returns the lowest.
 	// We take that value and append it to `code`
-	code << std::min(COLORS.begin(), COLORS.end(),
-					 [&dist](const std::pair<uint8_t, uint32_t>& a,
-							 const std::pair<uint8_t, uint32_t>& b) {
-						 /// Get the two colors from the color integers in the map.
-						 color a_col(a.second);
-						 color b_col(b.second);
-						 /// Return the one with the lower distance to the original color.
-						 return dist(a_col) < dist(b_col);
-					 })
+	code << (int)std::min_element(COLORS.begin(), COLORS.end(),
+								  [&dist](const std::pair<uint8_t, uint32_t>& a,
+										  const std::pair<uint8_t, uint32_t>& b) {
+									  /// Get the two colors from the color integers in the map.
+									  color a_col(a.second);
+									  color b_col(b.second);
+									  /// Return the one with the lower distance to the original color.
+									  return dist(a_col) < dist(b_col);
+								  })
 				->first;
 
 	code << " m";

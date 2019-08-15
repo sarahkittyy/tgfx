@@ -39,6 +39,8 @@ TEST(ansi_color, MODE_256)
 
 TEST(ansi_color, MODE_TRUE)
 {
+	using namespace tgfx::internal;
+	using tgfx::color;
 }
 
 #endif
