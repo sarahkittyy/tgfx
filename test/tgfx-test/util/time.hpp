@@ -8,11 +8,13 @@ TEST(time, Conversions)
 {
 	using tgfx::time;
 	time t(time::seconds(5));
+	EXPECT_EQ(t.as_nanoseconds(), 5000000000);
 	EXPECT_EQ(t.as_milliseconds(), 5000);
 	EXPECT_EQ(t.as_seconds(), 5);
 	t = time(time::milliseconds(220));
+	EXPECT_EQ(t.as_nanoseconds(), 220000000);
 	EXPECT_EQ(t.as_milliseconds(), 220);
-	EXPECT_EQ(t.as_seconds(), 2.2);
+	EXPECT_EQ(t.as_seconds(), 0.22);
 }
 
 TEST(time, Equality)
@@ -21,7 +23,7 @@ TEST(time, Equality)
 
 	time a(time::seconds(4));
 	time b(time::milliseconds(4000));
-	time c(time::nanoseconds(4000000));
+	time c(time::nanoseconds(4000000000));
 	time d(time::milliseconds(3999));
 
 	EXPECT_TRUE(a == b);
@@ -41,7 +43,7 @@ TEST(time, Comparisons)
 
 	time a(time::seconds(12));
 	time b(time::milliseconds(4250));
-	time c(time::nanoseconds(50000000));
+	time c(time::nanoseconds(5000000000));
 	time d(time::milliseconds(5000));
 
 	EXPECT_TRUE(a > b);
@@ -64,7 +66,7 @@ TEST(time, Arithmetic)
 
 	time a(time::seconds(3));
 	time b(time::milliseconds(200));
-	time c(time::nanoseconds(3000000));
+	time c(time::nanoseconds(3000000000));
 
 	EXPECT_EQ(a + b, time::seconds(3.2));
 	EXPECT_EQ(a - b, time::seconds(2.8));
