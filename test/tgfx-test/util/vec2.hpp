@@ -70,25 +70,25 @@ TEST(vec2, Comparisons)
 	vec2f c(4, 3);
 	vec2i d(4, 3);
 
-	EXPECT_EQ(a == a, true);
-	EXPECT_EQ(b == b, true);
-	EXPECT_EQ(c == c, true);
-	EXPECT_EQ(d == d, true);
-	EXPECT_EQ(a != a, false);
-	EXPECT_EQ(b != b, false);
-	EXPECT_EQ(c != c, false);
-	EXPECT_EQ(d != d, false);
+	EXPECT_TRUE(a == a);
+	EXPECT_TRUE(b == b);
+	EXPECT_TRUE(c == c);
+	EXPECT_TRUE(d == d);
+	EXPECT_FALSE(a != a);
+	EXPECT_FALSE(b != b);
+	EXPECT_FALSE(c != c);
+	EXPECT_FALSE(d != d);
 
-	EXPECT_EQ(a == b, false);
-	EXPECT_EQ(a == c, false);
-	EXPECT_EQ(a == d, false);
-	EXPECT_EQ(a != b, true);
-	EXPECT_EQ(a != c, true);
-	EXPECT_EQ(a != d, true);
-	EXPECT_EQ(b == c, false);
-	EXPECT_EQ(b == d, false);
-	EXPECT_EQ(c == d, true);
-	EXPECT_EQ(c != d, false);
+	EXPECT_FALSE(a == b);
+	EXPECT_FALSE(a == c);
+	EXPECT_FALSE(a == d);
+	EXPECT_TRUE(a != b);
+	EXPECT_TRUE(a != c);
+	EXPECT_TRUE(a != d);
+	EXPECT_FALSE(b == c);
+	EXPECT_FALSE(b == d);
+	EXPECT_TRUE(c == d);
+	EXPECT_FALSE(c != d);
 }
 
 TEST(vec2, DotProduct)
