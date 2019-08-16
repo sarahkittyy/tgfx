@@ -1,5 +1,9 @@
 var searchData=
 [
-  ['dot',['dot',['../classtgfx_1_1vec2.html#a47296f03e333812866b0334f778779a1',1,'tgfx::vec2']]],
-  ['draw',['draw',['../classtgfx_1_1context.html#a8276dc892a78404a9ee6e4270e8a1eac',1,'tgfx::context::draw()'],['../classtgfx_1_1drawable.html#afe1f4a435a5ec4e7c7f238d32fa5ed06',1,'tgfx::drawable::draw()'],['../classtgfx_1_1screen.html#a948aa370c3451da961e4478f2cf38510',1,'tgfx::screen::draw()']]]
+  ['clear',['clear',['../classtgfx_1_1context.html#ad06ed3b305e90bbff6d6ae88c910af08',1,'tgfx::context']]],
+  ['clock',['clock',['../classtgfx_1_1clock.html#a6773ae5e60a0ba346a667f50ce00aeb6',1,'tgfx::clock']]],
+  ['close',['close',['../classtgfx_1_1context.html#a7bf25ea5d14ac4fd68ce3d82100a3dc3',1,'tgfx::context']]],
+  ['code',['code',['../classtgfx_1_1style.html#a7f6d2fc5bda0c59fd60c60a6efc2a8f5',1,'tgfx::style']]],
+  ['color',['color',['../classtgfx_1_1color.html#a59c2a325ce04b0ee535b237a20f528a9',1,'tgfx::color::color()'],['../classtgfx_1_1color.html#abeb48580f5ce6c3beedd3720d5537cc4',1,'tgfx::color::color(uint8_t r, uint8_t g, uint8_t b)'],['../classtgfx_1_1color.html#afdb988a1bc7ba29cec074bcdbb142e69',1,'tgfx::color::color(uint32_t integer)']]],
+  ['context',['context',['../classtgfx_1_1context.html#ad0551013154477ffec2649c176985537',1,'tgfx::context']]]
 ];
