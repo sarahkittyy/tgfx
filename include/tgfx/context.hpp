@@ -2,7 +2,6 @@
 
 #include <sys/ioctl.h>
 #include <unistd.h>
-#include <chrono>
 #include <iostream>
 
 #include "tgfx/screen.hpp"
@@ -26,6 +25,11 @@ public:
 	/// Destroys the context.
 	~context();
 
+	/// Set the context framerate.
+	void set_framerate(unsigned int framerate);
+	/// Get the context framerate.
+	unsigned int get_framerate() const;
+
 	/// False after close() is called. Use this as a condition for a rendering loop.
 	const bool open() const;
 	/// Flags the context to close, making open() return false.
@@ -38,9 +42,9 @@ public:
 	/**
 	 * @brief Renders all buffered drawables drawn by draw() to the terminal.
 	 * 
-	 * @param framerate The framerate, in renders / second, to render at.
+	 * @remarks Causes the current rendering thread to sleep not enough time has passed based on the framerate.
 	 */
-	void render(unsigned int framerate = 15);
+	void render();
 
 	/// Returns the width / height of the terminal, in characters.
 	const vec2u size() const;
@@ -52,6 +56,8 @@ private:
 	screen m_screen;
 	/// Clock for timing the render() framerate.
 	clock m_clock;
+	/// The framerate to run at, in frames / second..
+	unsigned int m_framerate;
 };
 
 }
