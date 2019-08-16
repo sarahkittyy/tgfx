@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nanoseconds',['nanoseconds',['../classtgfx_1_1time.html#aa4e383a98fb5be49f0e2975aa6a5a884',1,'tgfx::time']]]
+  ['hypot',['hypot',['../classtgfx_1_1vec2.html#ab9b2dee01ff3a648a4f083b6ce2d1737',1,'tgfx::vec2']]]
 ];
