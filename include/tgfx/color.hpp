@@ -31,6 +31,11 @@ public:
 	/// Convert this color to a printable ansi-escape code.
 	std::string to_ansi_escape(bool foreground = true) const;
 
+	/// Returns true if the two colors are identical.
+	bool operator==(const color& other) const;
+	/// Returns true if the two colors aren't identical.
+	bool operator!=(const color& other) const;
+
 	/// Red component
 	uint8_t r;
 	/// Green component

@@ -43,4 +43,14 @@ std::string color::to_ansi_escape(bool foreground) const
 	return internal::get_color_escape_code(*this, foreground);
 }
 
+bool color::operator==(const color& other) const
+{
+	return r == other.r && g == other.g && b == other.b;
+}
+
+bool color::operator!=(const color& other) const
+{
+	return !operator==(other);
+}
+
 }
