@@ -29,7 +29,7 @@ TEST(color, IntegerConversion)
 
 	color c(127, 127, 255);
 	EXPECT_EQ(c.to_integer(), 0x7f7fffff);
-	c.from_integer(0x00FF7f00);
+	c = (0x00FF7f00);
 	EXPECT_EQ(c.r, 0);
 	EXPECT_EQ(c.g, 255);
 	EXPECT_EQ(c.b, 127);

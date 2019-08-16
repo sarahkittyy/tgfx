@@ -26,9 +26,6 @@ public:
 
 	/// Converts the color to a 32-bit color integer.
 	uint32_t to_integer() const;
-	/// Converts the color from a 32-bit color integer.
-	void from_integer(uint32_t integer);
-
 	/// Convert the color to a readable hex format.
 	std::string to_hex_color() const;
 	/// Convert this color to a printable ansi-escape code.
