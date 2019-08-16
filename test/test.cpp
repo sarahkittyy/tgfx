@@ -5,6 +5,7 @@
 #include "tgfx-test/drawable.hpp"
 #include "tgfx-test/internal/ansi-color.hpp"
 #include "tgfx-test/screen.hpp"
+#include "tgfx-test/style.hpp"
 #include "tgfx-test/util/clock.hpp"
 #include "tgfx-test/util/time.hpp"
 #include "tgfx-test/util/vec2.hpp"
