@@ -139,3 +139,10 @@ std::ostream& operator<<(std::ostream& os, const tgfx::vec2<Number>& vector)
 	os << std::string(vector);
 	return os;
 }
+
+/**
+ * @brief Example usage of tgfx::vec2 and various vector calculations.
+ * 
+ * @example vec2/vec2.cpp
+ * 
+ */

@@ -384,3 +384,10 @@ private:
  * 
  */
 std::ostream& operator<<(std::ostream& os, const tgfx::style& style);
+
+/**
+ * @brief Basic independent usage of tgfx::style to color and style text sent to stdout.
+ * 
+ * @example style/style.cpp
+ * 
+ */

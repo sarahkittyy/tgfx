@@ -66,16 +66,25 @@ $(function() {
 <div class="title">tgfx Documentation</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="toc"><h3>Table of Contents</h3>
+<ul><li class="level1"><a href="#mainpage">tgfx</a><ul><li class="level2"><a href="#autotoc_md0">Building</a></li>
+<li class="level2"><a href="#cmake-flags">CMake Flags</a></li>
+<li class="level2"><a href="#colors">Colors</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="textblock"><h1><a class="anchor" id="mainpage"></a>
 tgfx</h1>
 <p>Welcome to the tgfx docs!</p>
 <p>tgfx (terminal gfx) is an attempt at bringing <a href="https://github.com/SFML/SFML">SFML-</a>like experience to rendering "graphics" on a linux terminal.</p>
-<h2>Building</h2>
+<h2><a class="anchor" id="autotoc_md0"></a>
+Building</h2>
 <p>tgfx uses CMake as the primary build system.</p>
 <div class="fragment"><div class="line">cd tgfx</div><div class="line">mkdir build</div><div class="line">cd build</div><div class="line">cmake \ # CMake flags go here</div><div class="line">    ..</div><div class="line">make</div></div><!-- fragment --><p>See <a href="#cmake-flags"><b>CMake Flags</b></a> for build options.</p>
 <h2><a class="anchor" id="cmake-flags"></a>
 CMake Flags</h2>
-<div class="fragment"><div class="line">cmake \</div><div class="line">    -DBUILD_TESTS=on|off \ # &#39;on&#39; to build and run the tests.</div><div class="line">    -DCOLOR_MODE=true|256|16 \ # terminal color compatibility.</div><div class="line">    ..</div></div><!-- fragment --><p>See <a href="#colors"><b>Colors</b></a> for more info on <code>-DCOLOR_MODE=...</code></p>
+<div class="fragment"><div class="line">cmake \</div><div class="line">    -DBUILD_TESTS=on|off \ # &#39;on&#39; to build and run the tests.</div><div class="line">    -DCOLOR_MODE=true|256|16 \ # terminal color compatibility.</div><div class="line">    -DBUILD_EXAMPLES=on|off \ # &#39;on&#39; to build the examples, located in the examples/ directory.</div><div class="line">    ..</div></div><!-- fragment --><p>See <a href="#colors"><b>Colors</b></a> for more info on <code>-DCOLOR_MODE=...</code></p>
 <h2><a class="anchor" id="colors"></a>
 Colors</h2>
 <p>Most terminals support either 3/4 bit colors, 8 bit colors, or 24 bit (true) colors.</p>
