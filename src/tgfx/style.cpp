@@ -219,3 +219,9 @@ std::string style::generate_ansi(codes code) const
 }
 
 }
+
+std::ostream& operator<<(std::ostream& os, const tgfx::style& style)
+{
+	os << style.code();
+	return os;
+}

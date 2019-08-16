@@ -2,6 +2,7 @@
 
 #include <cstdint>
 #include <optional>
+#include <ostream>
 #include <set>
 #include "tgfx/color.hpp"
 
@@ -377,3 +378,9 @@ private:
 };
 
 }
+
+/**
+ * @brief ostream overload for outputting the style code.
+ * 
+ */
+std::ostream& operator<<(std::ostream& os, const tgfx::style& style);

@@ -1,5 +1,6 @@
 #pragma once
 
+#include <sstream>
 #include "gmock/gmock.h"
 #include "gtest/gtest.h"
 #include "tgfx/color.hpp"
@@ -167,4 +168,25 @@ TEST(style, flush)
 
 	s.flush();
 	EXPECT_THAT(s.code(), IsEmpty());
+}
+
+TEST(style, ostream)
+{
+	using tgfx::color;
+	using tgfx::style;
+
+	style s;
+	using namespace ::testing;
+	EXPECT_THAT(s.code(), IsEmpty());
+	s.bg_on(color(255, 127, 0));
+	s.fg_on(color(0, 10, 100));
+	s.bold_on();
+	s.italic_on();
+	s.faint_off();
+	s.strikeout_off();
+	s.underline_ignore();
+
+	std::ostringstream ss;
+	ss << s;
+	EXPECT_EQ(ss.str(), s.code());
 }
