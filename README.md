@@ -1,45 +1,56 @@
 # tgfx
 
-A cross-platform terminal graphics library for linux.
+A simple cross-platform terminal graphics library for linux.
 
-Heavily inspired by [SFML.](https://github.com/SFML/SFML)
+* Heavily inspired by [SFML.](https://github.com/SFML/SFML)
+* Supports text customization, colorization and styling, with no dependencies.
+* Handles 16-color, 256-color, and true color terminals in the back, so you don't have to.
+* Use only what you need. (text styling vs. rendering shapes vs. utility objects)
 
-## Building
+## Note
 
-```bash
-git clone https://github.com/sarahkittyy/tgfx
-cd tgfx
-mkdir build
-cd build
-cmake .. # See section "CMake Flags" for more options.
-make
+This repo is a <strong>Work In Progess.</strong> Not all features are implemented.
+
+## Documentation
+
+### [Click here to go to the docs.](https://sarahkittyy.github.io/tgfx)
+
+## Examples
+
+```cpp
+#include <iostream>
+#include "tgfx/tgfx.hpp"
+
+int main()
+{
+	// For terminal setup / cleanup.
+	tgfx::context ctx;
+
+	tgfx::style style;
+	style.bold_on();
+	style.italic_on();
+
+	// Blue text
+	style.fg_on(tgfx::color(60, 60, 255));
+	// Dark grey background
+	style.bg_on(tgfx::color(60, 60, 60));
+
+	std::cout << style << "Hello, World!" << std::endl;
+	return 0;
+}
 ```
 
-## Docs
+Output (in a true color terminal):
 
-See [the github.io page](https://sarahkittyy.github.io/tgfx) (files located in docs/html).
+![](examples/screenshots/main_true.png)
 
-## CMake Flags
+Output (in a 16-color terminal):
 
-```bash
-cmake \
-    -DBUILD_TESTS=on|off \ # 'on' to build and run the tests.
-    -DCOLOR_MODE=true|256|16 \ # terminal color compatibility. See section "Colors"
-    ..
-```
+![](examples/screenshots/main_16.png)
 
-## Colors
 
-Most terminals support either 3/4 bit colors, 8 bit colors, or 24 bit (true) colors.
+## TODO
 
-You can specify which color compatibility setting to use in the cmake flags with the variable `COLOR_MODE=(see below)`. The default mode is `true`
-
-|`-DCOLOR_MODE=...`|Mode|
-|-|-|
-|`true`| Full 24-bit RGB support |
-|`256` | 8 bit RGB support (256 colors) |
-|`16` | 4 bit color support (16 colors) |
-
-When using a mode other than `true`, rgb colors given to rendering methods will be rounded to the nearest available ansi color.
-
-You can view all ansi colors for the three different modes [here.](https://en.wikipedia.org/wiki/ANSI_escape_code#Colors)
+- [x] Terminal text coloring / styling
+- [ ] Terminal cursor movement
+- [ ] Drawable primitives
