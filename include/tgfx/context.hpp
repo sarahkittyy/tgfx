@@ -1,7 +1,5 @@
 #pragma once
 
-#include <sys/ioctl.h>
-#include <unistd.h>
 #include <iostream>
 
 #include "tgfx/screen.hpp"
@@ -47,7 +45,7 @@ public:
 	void render();
 
 	/// Returns the width / height of the terminal, in characters.
-	const vec2u size() const;
+	vec2u size() const;
 
 private:
 	/// True when initialized, falseified when close() is called. makes open() return false.

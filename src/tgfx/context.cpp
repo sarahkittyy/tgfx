@@ -62,11 +62,9 @@ void context::render()
 	std::string screen_content = m_screen.flush();
 }
 
-const vec2u context::size() const
+vec2u context::size() const
 {
-	winsize ws;
-	ioctl(STDOUT_FILENO, TIOCGWINSZ, &ws);
-	return vec2u(ws.ws_col, ws.ws_row);
+	return m_screen.size();
 }
 
 }
