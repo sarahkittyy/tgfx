@@ -21,7 +21,7 @@ public:
 	struct pixel
 	{
 		/// Constructor, with default settings.
-		pixel(char ch = ' ', style fmt = style());
+		pixel(char ch = ' ', style fmt = style().reset_on());
 		char ch;	 /// The char rendered to that pixel.
 		style fmt;   /// The styling applied to that pixel.
 	};
