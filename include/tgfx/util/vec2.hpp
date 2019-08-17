@@ -130,7 +130,9 @@ public:
 		/// Hashing operator overload.
 		std::size_t operator()(const vec2<Number>& vector) const noexcept
 		{
-			return std::hash<Number>(vector.x) ^ (std::hash<Number>(vector.y) << 1);
+			std::size_t h_x = std::hash<Number>{}(vector.x);
+			std::size_t h_y = std::hash<Number>{}(vector.y);
+			return h_x ^ (h_y << 1);
 		}
 	};
 };
