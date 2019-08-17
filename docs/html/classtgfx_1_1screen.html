@@ -67,6 +67,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classtgfx_1_1screen-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -79,6 +80,12 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="screen_8hpp_source.html">screen.hpp</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtgfx_1_1screen_1_1pixel.html">pixel</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A single screen pixel.  <a href="structtgfx_1_1screen_1_1pixel.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa421f207e5cb447cc470b29025d008e4"><td class="memItemLeft" align="right" valign="top"><a id="aa421f207e5cb447cc470b29025d008e4"></a>
@@ -93,6 +100,18 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtgfx_1_1screen.html#a948aa370c3451da961e4478f2cf38510">draw</a> (const <a class="el" href="classtgfx_1_1drawable.html">drawable</a> &amp;<a class="el" href="classtgfx_1_1drawable.html">drawable</a>)</td></tr>
 <tr class="memdesc:a948aa370c3451da961e4478f2cf38510"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a drawable object to the screen. <br /></td></tr>
 <tr class="separator:a948aa370c3451da961e4478f2cf38510"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadf9dd42c0c230dc66fabd8c0e64f904"><td class="memItemLeft" align="right" valign="top"><a id="aadf9dd42c0c230dc66fabd8c0e64f904"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtgfx_1_1screen.html#aadf9dd42c0c230dc66fabd8c0e64f904">set_pixel</a> (<a class="el" href="classtgfx_1_1vec2.html">vec2u</a> pos, const <a class="el" href="structtgfx_1_1screen_1_1pixel.html">pixel</a> &amp;<a class="el" href="structtgfx_1_1screen_1_1pixel.html">pixel</a>)</td></tr>
+<tr class="memdesc:aadf9dd42c0c230dc66fabd8c0e64f904"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a pixel on the screen. <br /></td></tr>
+<tr class="separator:aadf9dd42c0c230dc66fabd8c0e64f904"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac94a5eebdbd65c8904cebf586280af4"><td class="memItemLeft" align="right" valign="top"><a id="aac94a5eebdbd65c8904cebf586280af4"></a>
+<a class="el" href="structtgfx_1_1screen_1_1pixel.html">pixel</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtgfx_1_1screen.html#aac94a5eebdbd65c8904cebf586280af4">get_pixel</a> (<a class="el" href="classtgfx_1_1vec2.html">vec2u</a> pos)</td></tr>
+<tr class="memdesc:aac94a5eebdbd65c8904cebf586280af4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the pixel at the given position. <br /></td></tr>
+<tr class="separator:aac94a5eebdbd65c8904cebf586280af4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97c15c802306c46f6c664486ff1fecda"><td class="memItemLeft" align="right" valign="top"><a id="a97c15c802306c46f6c664486ff1fecda"></a>
+<a class="el" href="classtgfx_1_1vec2.html">vec2u</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtgfx_1_1screen.html#a97c15c802306c46f6c664486ff1fecda">size</a> () const</td></tr>
+<tr class="memdesc:a97c15c802306c46f6c664486ff1fecda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the size of the output terminal. <br /></td></tr>
+<tr class="separator:a97c15c802306c46f6c664486ff1fecda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Controls how drawable objects translate to pixels on the screen. </p>

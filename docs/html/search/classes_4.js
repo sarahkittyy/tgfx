@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['vec2',['vec2',['../classtgfx_1_1vec2.html',1,'tgfx']]]
+  ['screen',['screen',['../classtgfx_1_1screen.html',1,'tgfx']]],
+  ['style',['style',['../classtgfx_1_1style.html',1,'tgfx']]]
 ];
