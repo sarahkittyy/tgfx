@@ -24,9 +24,9 @@ public:
 	~context();
 
 	/// Set the context framerate.
-	void set_framerate(unsigned int framerate);
+	void set_framerate(float framerate);
 	/// Get the context framerate.
-	unsigned int get_framerate() const;
+	float get_framerate() const;
 
 	/// False after close() is called. Use this as a condition for a rendering loop.
 	const bool open() const;
@@ -55,7 +55,7 @@ private:
 	/// Clock for timing the render() framerate.
 	clock m_clock;
 	/// The framerate to run at, in frames / second..
-	unsigned int m_framerate;
+	float m_framerate;
 };
 
 }
