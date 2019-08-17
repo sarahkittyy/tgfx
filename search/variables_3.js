@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['x',['x',['../classtgfx_1_1vec2.html#ab3e2645202e18feaaa96bbf683e71d83',1,'tgfx::vec2']]]
+  ['r',['r',['../classtgfx_1_1color.html#aa54aba649a08bc3ec3a00c8c8260ce93',1,'tgfx::color']]]
 ];

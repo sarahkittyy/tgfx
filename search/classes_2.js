@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['screen',['screen',['../classtgfx_1_1screen.html',1,'tgfx']]],
-  ['style',['style',['../classtgfx_1_1style.html',1,'tgfx']]]
+  ['hasher',['hasher',['../structtgfx_1_1vec2_1_1hasher.html',1,'tgfx::vec2']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['x',['x',['../classtgfx_1_1vec2.html#ab3e2645202e18feaaa96bbf683e71d83',1,'tgfx::vec2']]]
+  ['vec2',['vec2',['../classtgfx_1_1vec2.html',1,'tgfx::vec2&lt; Number &gt;'],['../classtgfx_1_1vec2.html#a85c767c0300aa97eb0bb59d3af35be25',1,'tgfx::vec2::vec2()']]],
+  ['vec2_3c_20unsigned_20int_20_3e',['vec2&lt; unsigned int &gt;',['../classtgfx_1_1vec2.html',1,'tgfx']]]
 ];

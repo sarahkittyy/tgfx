@@ -9,5 +9,6 @@ var searchData=
   ['fg_5fignore',['fg_ignore',['../classtgfx_1_1style.html#a93a2c4fd7e1c67b363ea16c91686b37a',1,'tgfx::style']]],
   ['fg_5foff',['fg_off',['../classtgfx_1_1style.html#a5f139642ef06696c7d48725ed5ac9265',1,'tgfx::style']]],
   ['fg_5fon',['fg_on',['../classtgfx_1_1style.html#ae3a71bfd21971b59032de15985db31f3',1,'tgfx::style']]],
-  ['flush',['flush',['../classtgfx_1_1screen.html#a8e1fda16192ccc5bf60fb19e643706e7',1,'tgfx::screen::flush()'],['../classtgfx_1_1style.html#a2ce0c4d184593d3b72764e23085bc714',1,'tgfx::style::flush()']]]
+  ['flush',['flush',['../classtgfx_1_1screen.html#a8e1fda16192ccc5bf60fb19e643706e7',1,'tgfx::screen::flush()'],['../classtgfx_1_1style.html#a2ce0c4d184593d3b72764e23085bc714',1,'tgfx::style::flush()']]],
+  ['fmt',['fmt',['../structtgfx_1_1screen_1_1pixel.html#a3be047615fd0690dc7be922e484bab48',1,'tgfx::screen::pixel']]]
 ];
