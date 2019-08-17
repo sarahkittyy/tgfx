@@ -35,3 +35,10 @@ private:
 };
 
 }
+
+/**
+ * @brief Demonstration of primitives and custom drawables.
+ * 
+ * @example primitives/primitives.cpp
+ * 
+ */
