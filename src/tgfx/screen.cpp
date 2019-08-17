@@ -31,12 +31,15 @@ std::string screen::flush()
 			stream_pos--;
 			int last_x = stream_pos % size().x;
 			int last_y = stream_pos / size().x;
-
-			// Get and output the pixel.
+			// Get the current pixel.
 			const pixel& p = get_pixel(vec2u(x, y));
-			// Only output changes in formatting.
+
+			// Only change the ansi escape code if it's different than the
+			// previous one.
 			if (get_pixel(vec2u(last_x, last_y)).fmt != p.fmt)
 				out << p.fmt;
+
+			// Output the character.
 			out << p.ch;
 		}
 		out << "\n";
