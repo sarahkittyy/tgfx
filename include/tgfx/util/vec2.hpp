@@ -1,6 +1,7 @@
 #pragma once
 
 #include <cmath>
+#include <functional>
 #include <ostream>
 #include <sstream>
 #include <string>
@@ -123,6 +124,15 @@ public:
 	Number x;
 	/// Y
 	Number y;
+	/// For use in std::unordered_map/std::map, for hashing the vector.
+	struct hasher
+	{
+		/// Hashing operator overload.
+		std::size_t operator()(const vec2<Number>& vector) const noexcept
+		{
+			return std::hash<Number>(vector.x) ^ (std::hash<Number>(vector.y) << 1);
+		}
+	};
 };
 
 /// Common typedefs.
