@@ -40,7 +40,6 @@ void context::close()
 void context::clear()
 {
 	m_screen.flush();
-	std::cout << "\033[H\033[J";
 }
 
 void context::draw(const drawable& draw)
@@ -59,6 +58,7 @@ void context::render()
 		m_clock.restart();
 	}
 	//* Begin rendering here
+	std::cout << "\033[H\033[J";
 	std::string screen_content = m_screen.flush();
 }
 
