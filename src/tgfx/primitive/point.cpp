@@ -8,6 +8,26 @@ point::point(vec2u pos, color col)
 {
 }
 
+void point::set_position(vec2u pos)
+{
+	m_pos = pos;
+}
+
+vec2u point::get_position() const
+{
+	return m_pos;
+}
+
+void point::set_color(color col)
+{
+	m_col = col;
+}
+
+color point::get_color() const
+{
+	return m_col;
+}
+
 void point::draw(screen& scr) const
 {
 	/// Set the point's pixel.

@@ -24,6 +24,15 @@ public:
 	 */
 	point(vec2u pos, color col = color(0, 0, 0));
 
+	/// Set the position of the point
+	void set_position(vec2u pos);
+	/// Get the point's position.
+	vec2u get_position() const;
+	/// Set the point's color
+	void set_color(color col);
+	/// Get the point's color.
+	color get_color() const;
+
 private:
 	/// drawable::draw() override.
 	virtual void draw(screen& scr) const;
