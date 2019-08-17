@@ -19,15 +19,23 @@ std::string screen::flush()
 {
 	// Output stringstream.
 	std::ostringstream out;
+	// Move cursor to 0,0
+	out << "\u001b[0,0H";
 	// Iterate over all pixels, left-right, top-down.
-	for (uint32_t x = 0; x < size().x; ++x)
+	for (uint32_t y = 0; y < size().y; ++y)
 	{
-		for (uint32_t y = 0; y < size().y; ++y)
+		for (uint32_t x = 0; x < size().x; ++x)
 		{
+			// Get the previous position
+			int stream_pos = x + y * size().x;
+			stream_pos--;
+			int last_x = stream_pos % size().x;
+			int last_y = stream_pos / size().x;
+
 			// Get and output the pixel.
 			const pixel& p = get_pixel(vec2u(x, y));
 			// Only output changes in formatting.
-			if (get_pixel(vec2u(x - 1, y)).fmt != p.fmt)
+			if (get_pixel(vec2u(last_x, last_y)).fmt != p.fmt)
 				out << p.fmt;
 			out << p.ch;
 		}
