@@ -26,7 +26,10 @@ std::string screen::flush()
 		{
 			// Get and output the pixel.
 			const pixel& p = get_pixel(vec2u(x, y));
-			out << p.fmt << p.ch;
+			// Only output changes in formatting.
+			if (get_pixel(vec2u(x - 1, y)).fmt != p.fmt)
+				out << p.fmt;
+			out << p.ch;
 		}
 		out << "\n";
 	}
