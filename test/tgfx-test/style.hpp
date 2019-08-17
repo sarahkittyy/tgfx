@@ -190,3 +190,21 @@ TEST(style, ostream)
 	ss << s;
 	EXPECT_EQ(ss.str(), s.code());
 }
+
+TEST(style, equality)
+{
+	using tgfx::style;
+
+	style a, b;
+	EXPECT_TRUE(a == b);
+	a.bold_on();
+	EXPECT_TRUE(a != b);
+	b.bold_on();
+	EXPECT_FALSE(a != b);
+	b.italic_on();
+	EXPECT_FALSE(a == b);
+	b.italic_off();
+	EXPECT_TRUE(a != b);
+	b.italic_ignore();
+	EXPECT_FALSE(a != b);
+}
