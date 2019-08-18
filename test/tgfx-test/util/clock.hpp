@@ -10,7 +10,7 @@ TEST(clock, Working)
 	using namespace std::chrono_literals;
 
 	clock c;
-	EXPECT_NEAR(c.elapsed().as_seconds(), 1, 0.001);
+	EXPECT_NEAR(c.elapsed().as_seconds(), 0, 0.001);
 
 	//TODO: mocking std::this_thread::sleep() to make quick and reliable tests
 }
