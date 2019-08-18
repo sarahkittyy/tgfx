@@ -28,6 +28,8 @@ protected:
 /**
  * @brief Demonstration of primitives and custom drawables.
  * 
+ * @image html examples/screenshots/primitives.cpp.png
+ * 
  * @example primitives/primitives.cpp
  * 
  */
