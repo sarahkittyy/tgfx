@@ -20,6 +20,16 @@ TEST(vec2, Constructor)
 	EXPECT_EQ(v.y, 3);
 }
 
+TEST(vec2, Casting)
+{
+	using namespace tgfx;
+
+	vec2f a(2.f, 3.f);
+	vec2u b = a;
+	EXPECT_EQ(b.x, 2);
+	EXPECT_EQ(b.y, 3);
+}
+
 TEST(vec2, Assignment)
 {
 	using namespace tgfx;

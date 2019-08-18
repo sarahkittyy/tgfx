@@ -32,6 +32,13 @@ public:
 	{
 	}
 
+	/// Construct this vector from a vector of a different type.
+	template <typename OtherNumber>
+	vec2(const vec2<OtherNumber>& other)
+		: x(other.x), y(other.y)
+	{
+	}
+
 	/// Converts the x/y point to a readable human format.
 	operator std::string() const
 	{
