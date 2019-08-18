@@ -2,6 +2,7 @@
 
 #include <cmath>
 #include <functional>
+#include <initializer_list>
 #include <ostream>
 #include <sstream>
 #include <string>
@@ -21,6 +22,13 @@ public:
 	/// Initializes the vector to (x, y). Defaults to (0,0 )
 	vec2(Number x = 0, Number y = 0)
 		: x(x), y(y)
+	{
+	}
+
+	/// Initializes the vector using an initializer list, {x, y} -> (x, y).
+	template <typename AnyNumber>
+	vec2(std::initializer_list<AnyNumber> list)
+		: x(*list.begin()), y(*(list.begin() + 1))
 	{
 	}
 
