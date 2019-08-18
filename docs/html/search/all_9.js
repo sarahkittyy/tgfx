@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['milliseconds',['milliseconds',['../classtgfx_1_1time.html#a924b966ee4cf3106e5a719b795ac35c3',1,'tgfx::time']]]
+  ['line',['line',['../classtgfx_1_1line.html',1,'tgfx::line'],['../classtgfx_1_1line.html#a564300714d2ef4f3a746c4e0c316949a',1,'tgfx::line::line()']]]
 ];

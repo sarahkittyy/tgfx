@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.13)
 project(tgfx)
 
 option(BUILD_TESTS "Build the unit / mock tests" off)
+option(BUILD_EXAMPLES "Build the library examples" off)
 set(COLOR_MODE "true" CACHE STRING "Color support to use for terminal output.")
 set_property(CACHE COLOR_MODE PROPERTY STRINGS "true" "256" "16")
 
@@ -25,4 +26,8 @@ if(BUILD_TESTS)
 	enable_testing()
 	add_subdirectory("${CMAKE_SOURCE_DIR}/extern/googletest/googlemock")
 	add_subdirectory("test/")
+endif()
+
+if(BUILD_EXAMPLES)
+	add_subdirectory("${CMAKE_SOURCE_DIR}/examples")
 endif()

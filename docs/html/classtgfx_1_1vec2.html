@@ -67,6 +67,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classtgfx_1_1vec2-members.html">List of all members</a>  </div>
@@ -80,12 +81,28 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="vec2_8hpp_source.html">vec2.hpp</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtgfx_1_1vec2_1_1hasher.html">hasher</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">For use in std::unordered_map/std::map, for hashing the vector.  <a href="structtgfx_1_1vec2_1_1hasher.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a85c767c0300aa97eb0bb59d3af35be25"><td class="memItemLeft" align="right" valign="top"><a id="a85c767c0300aa97eb0bb59d3af35be25"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtgfx_1_1vec2.html#a85c767c0300aa97eb0bb59d3af35be25">vec2</a> (Number <a class="el" href="classtgfx_1_1vec2.html#ab3e2645202e18feaaa96bbf683e71d83">x</a>=0, Number <a class="el" href="classtgfx_1_1vec2.html#ab68249795a520cda29b87b02f604ee12">y</a>=0)</td></tr>
 <tr class="memdesc:a85c767c0300aa97eb0bb59d3af35be25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the vector to (x, y). Defaults to (0,0 ) <br /></td></tr>
 <tr class="separator:a85c767c0300aa97eb0bb59d3af35be25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf7f159b7923b78cbb5a0190dbcebe1b"><td class="memTemplParams" colspan="2"><a id="acf7f159b7923b78cbb5a0190dbcebe1b"></a>
+template&lt;typename AnyNumber &gt; </td></tr>
+<tr class="memitem:acf7f159b7923b78cbb5a0190dbcebe1b"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classtgfx_1_1vec2.html#acf7f159b7923b78cbb5a0190dbcebe1b">vec2</a> (std::initializer_list&lt; AnyNumber &gt; list)</td></tr>
+<tr class="memdesc:acf7f159b7923b78cbb5a0190dbcebe1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the vector using an initializer list, {x, y} -&gt; (x, y). <br /></td></tr>
+<tr class="separator:acf7f159b7923b78cbb5a0190dbcebe1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86f3dee4af4ede2cfb4b2c6b6e654cfb"><td class="memTemplParams" colspan="2"><a id="a86f3dee4af4ede2cfb4b2c6b6e654cfb"></a>
+template&lt;typename OtherNumber &gt; </td></tr>
+<tr class="memitem:a86f3dee4af4ede2cfb4b2c6b6e654cfb"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classtgfx_1_1vec2.html#a86f3dee4af4ede2cfb4b2c6b6e654cfb">vec2</a> (const <a class="el" href="classtgfx_1_1vec2.html">vec2</a>&lt; OtherNumber &gt; &amp;other)</td></tr>
+<tr class="memdesc:a86f3dee4af4ede2cfb4b2c6b6e654cfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct this vector from a vector of a different type. <br /></td></tr>
+<tr class="separator:a86f3dee4af4ede2cfb4b2c6b6e654cfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c04baae0b7b9ac3dfabd9649d19f5a6"><td class="memItemLeft" align="right" valign="top"><a id="a5c04baae0b7b9ac3dfabd9649d19f5a6"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtgfx_1_1vec2.html#a5c04baae0b7b9ac3dfabd9649d19f5a6">operator std::string</a> () const</td></tr>
 <tr class="memdesc:a5c04baae0b7b9ac3dfabd9649d19f5a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the x/y point to a readable human format. <br /></td></tr>
@@ -175,6 +192,8 @@ class tgfx::vec2&lt; Number &gt;</h3>
     <tr><td class="paramname">Number</td><td>Any C++ numerical type. </td></tr>
   </table>
   </dd>
+</dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="vec2_2vec2_8cpp-example.html#_a0">vec2/vec2.cpp</a>.</dd>
 </dl>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/tgfx/util/<a class="el" href="vec2_8hpp_source.html">vec2.hpp</a></li>

@@ -45,3 +45,10 @@ public:
 };
 
 }
+
+/**
+ * @brief Example usage of basic color operations and conversions.
+ * 
+ * @example color/color.cpp
+ * 
+ */

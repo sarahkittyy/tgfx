@@ -1,6 +1,8 @@
 #pragma once
 
 #include <cmath>
+#include <functional>
+#include <initializer_list>
 #include <ostream>
 #include <sstream>
 #include <string>
@@ -20,6 +22,20 @@ public:
 	/// Initializes the vector to (x, y). Defaults to (0,0 )
 	vec2(Number x = 0, Number y = 0)
 		: x(x), y(y)
+	{
+	}
+
+	/// Initializes the vector using an initializer list, {x, y} -> (x, y).
+	template <typename AnyNumber>
+	vec2(std::initializer_list<AnyNumber> list)
+		: x(*list.begin()), y(*(list.begin() + 1))
+	{
+	}
+
+	/// Construct this vector from a vector of a different type.
+	template <typename OtherNumber>
+	vec2(const vec2<OtherNumber>& other)
+		: x(other.x), y(other.y)
 	{
 	}
 
@@ -123,6 +139,17 @@ public:
 	Number x;
 	/// Y
 	Number y;
+	/// For use in std::unordered_map/std::map, for hashing the vector.
+	struct hasher
+	{
+		/// Hashing operator overload.
+		std::size_t operator()(const vec2<Number>& vector) const noexcept
+		{
+			std::size_t h_x = std::hash<Number>{}(vector.x);
+			std::size_t h_y = std::hash<Number>{}(vector.y);
+			return h_x ^ (h_y << 1);
+		}
+	};
 };
 
 /// Common typedefs.
@@ -139,3 +166,10 @@ std::ostream& operator<<(std::ostream& os, const tgfx::vec2<Number>& vector)
 	os << std::string(vector);
 	return os;
 }
+
+/**
+ * @brief Example usage of tgfx::vec2 and various vector calculations.
+ * 
+ * @example vec2/vec2.cpp
+ * 
+ */

@@ -4,6 +4,8 @@
 #include "tgfx-test/context.hpp"
 #include "tgfx-test/drawable.hpp"
 #include "tgfx-test/internal/ansi-color.hpp"
+#include "tgfx-test/primitive/line.hpp"
+#include "tgfx-test/primitive/point.hpp"
 #include "tgfx-test/screen.hpp"
 #include "tgfx-test/style.hpp"
 #include "tgfx-test/util/clock.hpp"

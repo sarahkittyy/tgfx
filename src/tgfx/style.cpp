@@ -44,6 +44,16 @@ std::string style::code() const
 	return ss.str();
 }
 
+bool style::operator==(const style& other) const
+{
+	return code() == other.code();
+}
+
+bool style::operator!=(const style& other) const
+{
+	return !operator==(other);
+}
+
 /**
  * @brief This macro reduces boilerplate for the standard style functions
  * on, off, ignore, and state setters / getters.

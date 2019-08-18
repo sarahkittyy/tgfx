@@ -62,3 +62,10 @@ private:
 };
 
 }
+
+/**
+ * @brief Example usage of tgfx::clock and tgfx::time for timing code.
+ * 
+ * @example timing/timing.cpp
+ * 
+ */

@@ -13,7 +13,21 @@ TEST(vec2, Constructor)
 
 	v = vec2f();
 	EXPECT_EQ(v.x, 0);
-	EXPECT_EQ(v.x, 0);
+	EXPECT_EQ(v.y, 0);
+
+	v = { 5, 3.f };
+	EXPECT_EQ(v.x, 5);
+	EXPECT_EQ(v.y, 3);
+}
+
+TEST(vec2, Casting)
+{
+	using namespace tgfx;
+
+	vec2f a(2.f, 3.f);
+	vec2u b = a;
+	EXPECT_EQ(b.x, 2);
+	EXPECT_EQ(b.y, 3);
 }
 
 TEST(vec2, Assignment)

@@ -339,6 +339,22 @@ public:
 	 */
 	std::string code() const;
 
+	/**
+	 * @brief Equality overload. Compares the result of style::code().
+	 * 
+	 * @param other The other style.
+	 * @return true If the two styles are equal.
+	 */
+	bool operator==(const style& other) const;
+
+	/**
+	 * @brief Inequality overload. Compares the result of style::code().
+	 * 
+	 * @param other The other style.
+	 * @return true If the two styles are inequal.
+	 */
+	bool operator!=(const style& other) const;
+
 private:
 	/**
 	 * @brief ANSI codes for certain text properties.
@@ -384,3 +400,10 @@ private:
  * 
  */
 std::ostream& operator<<(std::ostream& os, const tgfx::style& style);
+
+/**
+ * @brief Basic independent usage of tgfx::style to color and style text sent to stdout.
+ * 
+ * @example style/style.cpp
+ * 
+ */

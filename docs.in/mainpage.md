@@ -27,6 +27,7 @@ See [**CMake Flags**](#cmake-flags) for build options.
 cmake \
     -DBUILD_TESTS=on|off \ # 'on' to build and run the tests.
     -DCOLOR_MODE=true|256|16 \ # terminal color compatibility.
+    -DBUILD_EXAMPLES=on|off \ # 'on' to build the examples, located in the examples/ directory.
     ..
 ```
 
