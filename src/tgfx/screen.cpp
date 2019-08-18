@@ -42,7 +42,7 @@ std::string screen::flush()
 			// Output the character.
 			out << p.ch;
 		}
-		out << "\n";
+		out << style().reset_on() << "\n";
 	}
 
 	// Finally, clear the screen map.
